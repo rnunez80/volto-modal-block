@@ -7,7 +7,7 @@ export const ModalButtonSchema = (props) => {
       {
         id: 'default',
         title: 'Default',
-        fields: ['iconImage', 'titleText', 'contentText'],
+        fields: ['iconImage', 'titleText', 'modalBlocks'],
       },
     ],
 
@@ -21,11 +21,9 @@ export const ModalButtonSchema = (props) => {
         title: 'Title',
         required: true,
       },
-      contentText: {
-        title: 'Text',
-        widget: 'textarea',
-        type: 'wysiwyg',
-        required: true,
+      modalBlocks: {
+        title: 'Modal Content',
+        type: 'blocks',
       },
     },
     required: [],
