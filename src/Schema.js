@@ -14,18 +14,16 @@ export const ModalButtonSchema = (props) => {
     properties: {
       iconImage: {
         title: 'icon',
-        required: true,
         type: 'object',
       },
       titleText: {
         title: 'Title',
-        required: true,
       },
       modalBlocks: {
         title: 'Modal Content',
         type: 'blocks',
       },
     },
-    required: [],
+    required: ['iconImage', 'titleText'],
   };
 };

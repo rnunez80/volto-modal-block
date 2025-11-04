@@ -9,5 +9,10 @@
     "volto",
     "plone",
     "react"
-  ]
+  ],
+  "dependencies": {
+    "@react-aria/button": "^3.14.2",
+    "@react-aria/dialog": "^3.5.31",
+    "react-aria-components": "^1.13.0"
+  }
 }
