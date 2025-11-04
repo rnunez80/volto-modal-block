@@ -1,24 +1,28 @@
 import React from 'react';
-import { Button, Header, Icon, Modal } from 'semantic-ui-react';
-import RenderBlocks from '@plone/volto/components/theme/View/RenderBlocks';
+import { Button, Header, Modal } from 'semantic-ui-react';
+import { RichText } from '@plone/volto-slate/editor/render';
 
-function View({ data, metadata }) {
+function View({ data }) {
   const [open, setOpen] = React.useState(false);
   return (
     <>
-      <button onClick={() => setOpen(true)}>
-        {data.iconImage && <img src={data.iconImage.file_name} alt="" />} {/* Added alt attribute for accessibility */}
-        {data.titleText}
-      </button>
       <Modal
         closeIcon
         open={open}
         onClose={() => setOpen(false)}
         onOpen={() => setOpen(true)}
+        trigger={
+          <Button>
+            {data.iconImage && (
+              <img src={data.iconImage.file_name} alt="" />
+            )}{' '}
+            {data.titleText}
+          </Button>
+        }
       >
         <Header icon="archive" content={data.titleText} />
         <Modal.Content>
-          <RenderBlocks content={data.modalBlocks} metadata={metadata} />
+          <RichText value={data.modalBlocks} />
         </Modal.Content>
       </Modal>
     </>

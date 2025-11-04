@@ -23,7 +23,7 @@ export const ModalButtonSchema = (props) => {
       },
       modalBlocks: {
         title: 'Modal Content',
-        type: 'blocks',
+        widget: 'slate',
       },
     },
     required: [],

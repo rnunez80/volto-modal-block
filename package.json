@@ -9,5 +9,8 @@
     "volto",
     "plone",
     "react"
-  ]
+  ],
+  "dependencies": {
+    "@plone/volto-slate": "^18.7.1"
+  }
 }
